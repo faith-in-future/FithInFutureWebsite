@@ -19,7 +19,7 @@
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .section__header {
@@ -80,7 +80,10 @@ nav {
   margin-inline: auto;
   z-index: 9;
 }
-
+.inst-li{
+  font-size: 20px;
+  color: var(--text-light);
+}
 .nav__header {
   padding: 1rem;
   width: 100%;
@@ -98,6 +101,15 @@ nav {
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
+}
+.deals_card_ul ul li {
+color: var(--text-light);
+padding: 10px 0px;
+}
+.our-offer{
+  max-width: var(--max-width);
+  margin: 0px 2px;
+  padding: 1rem 1rem;
 }
 
 .nav__links {
@@ -152,6 +164,7 @@ nav {
 
 .header__content > div {
   max-width: 500px;
+  height: 600px;
   padding: 4rem 1rem;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
@@ -160,9 +173,13 @@ nav {
 .header__content h1 {
   margin-bottom: 1rem;
   font-size: 4rem;
+  align-items: center;
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--primary-color);
+}
+.checked {
+  color: orange;
 }
 
 .header__content p {
@@ -413,6 +430,14 @@ nav {
   opacity: 0.8;
   text-align: center;
 }
+@media(width<429px){
+   /* .header-learn{
+    margin-bottom: 30px;
+  }  */
+   .image-container img{
+    margin-top: 50px;
+  }
+ }  
 
 @media (width > 540px) {
   .deals__container {
@@ -422,10 +447,10 @@ nav {
   .about__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .product__grid {
+ 
+   .product__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } 
 
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
@@ -534,7 +559,13 @@ nav {
 
   .product__grid {
     grid-template-columns: repeat(3, 1fr);
+    /* display: flex; */
   }
+  .product__grid_inst{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
 
   .client__card {
     grid-template-columns: repeat(2, 1fr);
@@ -560,7 +591,17 @@ nav {
     gap: 4rem 2rem;
   }
 }
-
+.btn-sub{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.btn-sub-footer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  
+}
 .btn-container{
   width: fit-content;
   padding: 0.75rem 1.5rem;
