@@ -271,6 +271,68 @@ padding: 10px 0px;
   display: grid;
   gap: 2rem;
 }
+.limited-seats {
+  font-family: "Cabin", sans-serif;
+  background: linear-gradient(45deg, #7941ff, #ff4b2b);
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 13px 40px;
+  border-radius: 40px;
+  margin-top: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.limited-seats::before, .limited-seats::after {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  top: -80%;
+  left: -80%;
+  transition: all 0.5s ease;
+}
+
+.limited-seats::after {
+  top: auto;
+  bottom: -80%;
+  left: auto;
+  right: -80%;
+}
+
+.limited-seats:hover {
+  transform: scale(1.05);
+}
+
+.limited-seats:hover::before {
+  top: -100%;
+  left: -100%;
+}
+
+.limited-seats:hover::after {
+  bottom: -100%;
+  right: -100%;
+}
+
+.limited-seats span {
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
 
 .product__card {
   position: relative;
